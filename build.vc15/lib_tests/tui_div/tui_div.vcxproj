@@ -22,6 +22,7 @@
     <ProjectGuid>{CF88CB17-8E0D-4FA5-83A9-C03D8CE25390}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>tui_div</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

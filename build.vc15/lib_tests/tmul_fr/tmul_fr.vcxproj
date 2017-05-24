@@ -22,6 +22,7 @@
     <ProjectGuid>{90827A06-50FB-4D72-B7F7-86C8F79717F0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>tmul_fr</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

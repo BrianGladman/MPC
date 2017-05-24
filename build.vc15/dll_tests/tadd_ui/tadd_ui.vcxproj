@@ -22,6 +22,7 @@
     <ProjectGuid>{E64F6457-4548-4D4F-8875-DDC96A3ABD4F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>tadd_ui</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

@@ -22,6 +22,7 @@
     <ProjectGuid>{34F9EABC-323D-4B34-AEFD-E59F499729A0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>tacos</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

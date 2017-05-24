@@ -22,6 +22,7 @@
     <ProjectGuid>{D6385A5C-3034-42E1-8DD7-E3756B3BBBC5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>tcosh</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

@@ -22,6 +22,7 @@
     <ProjectGuid>{15DEA998-F883-4D18-BD08-1E2351ED1394}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>tfr_sub</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

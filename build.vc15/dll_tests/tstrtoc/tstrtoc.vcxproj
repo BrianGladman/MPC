@@ -22,6 +22,7 @@
     <ProjectGuid>{3141556A-4B9D-4A17-ABA2-ECDAE861CCB8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>tstrtoc</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
