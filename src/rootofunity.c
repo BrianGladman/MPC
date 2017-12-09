@@ -156,7 +156,9 @@ mpc_rootofunity (mpc_ptr rop, unsigned long n, unsigned long k, mpc_rnd_t rnd)
 
    prec = MPC_MAX_PREC(rop);
 
-   mpfr_init2 (t, 67); /* see the argument at the end of the following loop */
+   /* For the error analysis justifying the following algorithm,
+      see algorithms.tex. */
+   mpfr_init2 (t, 67);
    mpfr_init2 (s, 67);
    mpfr_init2 (c, 67);
    mpq_init (kn);
@@ -164,47 +166,15 @@ mpc_rootofunity (mpc_ptr rop, unsigned long n, unsigned long k, mpc_rnd_t rnd)
    mpq_mul_2exp (kn, kn, 1); /* kn=2*k/n < 2 */
 
    do {
-      prec += mpc_ceil_log2 (prec) + 5;
+      prec += mpc_ceil_log2 (prec) + 5; /* prec >= 6 */
 
       mpfr_set_prec (t, prec);
       mpfr_set_prec (s, prec);
       mpfr_set_prec (c, prec);
 
-      mpfr_const_pi (t, MPFR_RNDN); /* error <= 0.5 ulp but since
-                                       ulp(t)=2^(2-prec), the absolute error
-                                       is bounded by 2^(1-prec), and the
-                                       relative error is bounded by
-                                       2^(1-prec)/pi <= 0.64*2^(-prec) */
-      mpfr_mul_q (t, t, kn, MPFR_RNDN); /* error <= 1.15 ulp(t) */
-      /* Indeed, the error is bounded by 0.64*2^(-prec)*pi*kn + 0.5 ulp [1].
-         Applying 2^(-prec)*|x| <= ulp(x) to x=pi*kn, we get a bound of:
-         0.64*ulp(pi*kn)+0.5 ulp.
-         Now since ulp(pi*kn) <= 2*ulp(t), we get: |t-pi*kn| <= 1.78*ulp(t).
-         If we plug this into [1] we get:
-         0.64*2^(-prec)*t + 0.64*2^(-prec)*1.78*ulp(t) + 0.5 ulp(t)
-         <= 0.64*ulp(t) + 0.64*2^(-prec)*1.78*ulp(t) + 0.5 ulp(t)
-         <= 1.15*ulp(t) for prec >= 7. */
-
+      mpfr_const_pi (t, MPFR_RNDN);
+      mpfr_mul_q (t, t, kn, MPFR_RNDN);
       mpfr_sin_cos (s, c, t, MPFR_RNDN);
-         /* error (1.5*2^{Exp (t) - Exp (s resp. c)} + 0.5) ulp
-            We have 0<t<2*pi, so Exp (t) <= 3.
-            Unfortunately s or c can be close to 0, but with n<2^64,
-            we lose at most about 64 bits:
-            Where the minimum of s and c over all primitive n-th roots of
-            unity is reached depends on n mod 4.
-            To simplify the argument, we will consider the 4*n-th roots of
-            unity, which contain the n-th roots of unity and which are
-            symmetrically distributed with respect to the real and imaginary
-            axes, so that it becomes enough to consider only s for k=1.
-            With n<2^64, the absolute values of all s or c are at least
-            sin (2 * pi * 2^(-64) / 4) > 2^(-64) of exponent at least -63.
-            So the error is bounded above by
-            (1.5*2^66+0.5) ulp < 2^67 ulp.
-            To obtain a more precise bound for smaller n, which is useful
-            especially at small precision, we may use the error bound of
-            (1.5*2^(3 - Exp (s or c)) + 0.5) ulp
-            < 2^(4 - Exp (s or c)) ulp, since Exp (s or c) is at most 0. */
-
    }
    while (   !mpfr_can_round (c, prec - (4 - mpfr_get_exp (c)),
                  MPFR_RNDN, MPFR_RNDZ,
