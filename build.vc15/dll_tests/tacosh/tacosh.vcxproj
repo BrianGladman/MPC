@@ -22,7 +22,7 @@
     <ProjectGuid>{703DA2A4-3FC4-458C-8DFB-2B5B4FC11BE9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>tacosh</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

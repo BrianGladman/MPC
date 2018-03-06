@@ -22,7 +22,7 @@
     <ProjectGuid>{DF9C3E38-332D-4EC3-9673-7C54FF81953B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>timag</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
