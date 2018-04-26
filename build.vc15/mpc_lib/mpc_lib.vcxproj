@@ -197,6 +197,7 @@
     <ClCompile Include="..\..\src\div_2ui.c" />
     <ClCompile Include="..\..\src\div_fr.c" />
     <ClCompile Include="..\..\src\div_ui.c" />
+    <ClCompile Include="..\..\src\dot.c" />
     <ClCompile Include="..\..\src\exp.c" />
     <ClCompile Include="..\..\src\fma.c" />
     <ClCompile Include="..\..\src\fr_div.c" />
@@ -246,6 +247,7 @@
     <ClCompile Include="..\..\src\sub.c" />
     <ClCompile Include="..\..\src\sub_fr.c" />
     <ClCompile Include="..\..\src\sub_ui.c" />
+    <ClCompile Include="..\..\src\sum.c" />
     <ClCompile Include="..\..\src\swap.c" />
     <ClCompile Include="..\..\src\tan.c" />
     <ClCompile Include="..\..\src\tanh.c" />
