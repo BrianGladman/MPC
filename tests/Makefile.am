@@ -17,7 +17,7 @@
 ## You should have received a copy of the GNU Lesser General Public License
 ## along with this program. If not, see http://www.gnu.org/licenses/ .
 
-AM_CPPFLAGS = -I$(top_srcdir)/src
+AM_CPPFLAGS = -I$(top_srcdir)/src -I$(top_srcdir)
 LDADD = libmpc-tests.la $(top_builddir)/src/libmpc.la
 # let libtool create an executable instead of a shell script
 # useful for tests with valgrind
@@ -65,7 +65,10 @@ DATA_SETS = abs.dat acos.dat acosh.dat add.dat add_fr.dat arg.dat	\
   pow_fr.dat pow_si.dat pow_ui.dat pow_z.dat proj.dat rootofunity.dat   \
   sin.dat sinh.dat                                                      \
   sqr.dat sqrt.dat strtoc.dat sub.dat sub_fr.dat tan.dat tanh.dat
-EXTRA_DIST = data_check.tpl tgeneric.tpl $(DATA_SETS) $(DESCRIPTIONS)
+EXTRA_DIST = data_check.tpl tgeneric.tpl $(DATA_SETS) $(DESCRIPTIONS) \
+	     mpcheck-float.c mpcheck-double.c mpcheck-longdouble.c \
+	     mpcheck-float128.c mpcheck-common.c \
+             mpcheck-template1.c mpcheck-template2.c mpcheck-template3.c
 
 LOG_COMPILER = $(VALGRIND)
 AM_LOG_FLAGS = $(VALGRIND_OPTS)
