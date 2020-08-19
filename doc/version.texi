@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 @set UPDATED 11 January 2018
 @set UPDATED-MONTH January 2018
 @set EDITION 1.1.0
 @set VERSION 1.1.0
+=======
+@set UPDATED 23 July 2020
+@set UPDATED-MONTH July 2020
+@set EDITION 1.2.0dev
+@set VERSION 1.2.0dev
+>>>>>>> d3ae65223b762fd790161bcf9dcadcaf7d4fcf2f

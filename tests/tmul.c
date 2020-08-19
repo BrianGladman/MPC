@@ -1,6 +1,6 @@
 /* tmul -- test file for mpc_mul.
 
-Copyright (C) 2002, 2005, 2008, 2009, 2010, 2011, 2012, 2013 INRIA
+Copyright (C) 2002, 2005, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2020 INRIA
 
 This file is part of GNU MPC.
 
@@ -150,7 +150,7 @@ bug20200206 (void)
     {
       printf ("Error, mpc_mul returns an out-of-range exponent:\n");
       mpfr_dump (mpc_realref (z));
-      printf ("Bug most probably in MPFR, please upgrade to MPFR 4.0.3 or later\n");
+      printf ("Bug most probably in MPFR, please upgrade to MPFR 4.1.0 or later\n");
       exit (1);
     }
   mpc_clear (x);
@@ -227,7 +227,6 @@ main (void)
   timemul ();
 #endif
 
-  bug20200206 ();
   check_regular ();
 
   data_check_template ("mul.dsc", "mul.dat");

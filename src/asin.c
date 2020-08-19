@@ -1,6 +1,10 @@
 /* mpc_asin -- arcsine of a complex number.
 
+<<<<<<< HEAD
 Copyright (C) 2009-2020 INRIA
+=======
+Copyright (C) 2009, 2010, 2011, 2012, 2013, 2014, 2020 INRIA
+>>>>>>> d3ae65223b762fd790161bcf9dcadcaf7d4fcf2f
 
 This file is part of GNU MPC.
 
