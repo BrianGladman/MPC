@@ -227,6 +227,7 @@ main (void)
   timemul ();
 #endif
 
+  bug20200206 ();
   check_regular ();
 
   data_check_template ("mul.dsc", "mul.dat");

@@ -1,10 +1,6 @@
 /* mpc_get_version -- MPC version
 
-<<<<<<< HEAD
-Copyright (C) 2008, 2009, 2010, 2011, 2012, 2017, 2018 INRIA
-=======
 Copyright (C) 2008, 2009, 2010, 2011, 2012, 2017, 2018, 2020 INRIA
->>>>>>> d3ae65223b762fd790161bcf9dcadcaf7d4fcf2f
 
 This file is part of GNU MPC.
 
